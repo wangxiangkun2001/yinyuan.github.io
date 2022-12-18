@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			html{
+				font-size: 62.5%;
+			}
+			.top{
+				width:100%;
+				height:20rem;
+				position:fixed;
+				top:0;
+			}
+			.top img{
+				width:100%;
+				height:20rem;
+			}
+			.cont{
+				width:90%;
+				margin:0 auto;
+			}
+			.cont img{
+				margin-top: 21rem;
+				width:95%;
+				}
+				.box{
+					width:100%;
+					display:flex;
+					justify-content: space-between;
+				}
+				.box .left{
+					width:30%;
+					margin-top: 2rem;
+					background-color: gainsboro;
+					/*position:fixed;*/
+					/*top:-2rem;*/
+					/*left:2rem;*/
+				}
+				.box .left p{
+					width:100%;
+					height:6rem;
+					font-size: 2rem;
+					/*padding:1rem;*/
+					text-align: center;
+					padding-top:1rem;
+				}
+				.box .right{
+					width:65%;
+					margin-top: 2rem;
+					/*margin-left: 13rem;*/
+				}
+				.box .right .tu{
+					width:35%;
+				}
+				.tu img{
+					width:100%;
+					margin-top: 0rem;
+				}
+				.box .right .right-1{
+					width:60%;
+				}
+				.right-right{
+					width:100%;
+					display:flex;
+					justify-content: space-between;
+					/*border:1px solid red;*/
+					text-align: center;
+				}
+				.right-1{
+					width:50%;
+					/*border:1px solid red;*/
+					height:13rem;
+					text-align: left;
+				}
+				.yu{
+					font-size: 2rem;
+				}
+				.tian{
+					color:#d07944;
+				}
+				.jiu{
+					border:1px solid #fff3ed;
+					color:#ff6e5a;
+					width:8rem;
+					text-align:center;
+				}
+				.leng{
+					display: flex;
+					justify-content: flex-start;
+					
+				}
+				.leng p{
+					border:1px solid orange;
+					color:orange;
+					margin-left: 0.3rem;
+				}
+				.qian{
+					display: flex;
+					justify-content: flex-start;
+					}
+				.jia{
+					font-size: 1.5rem;
+					color:red;
+				}
+				.shi{
+					font-size: 1rem;
+				}
+				.xuan{
+					border:1px solid red;
+					background-color: red;
+					color:black;
+					margin-left: 3rem;
+				}
+				.style{
+					color:red;
+				}
+		</style>
+	</head>
+	<body>
+		<!--<div class="he">-->
+		   <div class="top"><img src="img/naicha/src=http___empic.dfcfw.com_755259055441887237_w822h578_art&refer=http___empic.dfcfw.webp"/></div>
+	       <div class="cont"><img src="img/naicha/b4ec620938763325d56b96754038379(1).png"</div>
+	       <div class="box">
+		<div class="left">
+			<p>雪王新品</p>
+			<p>现煮奶茶</p>
+			<p>清爽果茶</p>
+			<p>人气必买</p>
+			<p>芝士奶盖</p>
+			<p>鲜冰淇淋</p>
+		</div>
+		<div class="right">
+			<!--<div class="right-right">
+						<p class="tu"><img src="img/naicha/src=http___5b0988e595225.cdn.sohucs.com_images_20180420_a8db75f1d6e447e5a608eed49147f433.jpg&refer=http___5b0988e595225.cdn.sohucs.webp"/></p>
+				         <div class="right-1">
+				         	<p class="yu">芋泥好暖耶</p>
+				         	<p class="tian">7天内57人下单</p>
+				         	<div class="leng">
+				         		<p class="re">冷热皆宜</p>
+				         		<p class="ye">椰香四溢</p>
+				         	</div>
+				         	<p class="shou">月售239</p>
+				         	<p class="jiu">9.5折 限1份</p>
+				         	<div class="qian">
+				         		<p class="jia">￥9.5</p>
+				         		<p class="shi">￥10</p>
+				         		<p class="xuan">选规格</p>
+				         	</div>
+				         </div>
+					</div>
+					
+				-->
+			</div>	
+		</div>
+		<script type="text/javascript" src="zepto.js" ></script>
+		<script type="text/javascript">
+			$.ajax({
+				type:"get",
+				url:"new_file.json",
+				async:true,
+				success:function(data){
+					$(function(){
+						for(var i=0;i<data.arr.length;i++){
+							var $div1=$("<div></div>")
+							$div1.attr("class","right-right")
+							$(".right").append($div1)
+							var $p1=$("<p></p>")
+							$p1.attr("class","tu")
+						    $div1.append($p1)
+						    var $img=$("<img />")
+						    $img.attr("src",data.arr[i].img)
+						    $p1.append($img)
+						    var $div2=$("<div></div>")
+						    $div2.attr("class","right-1")
+						    $div1.append($div2)
+						    var $p2=$("<p></p>")
+						    $p2.attr("class","yu")
+						    $p2.html(data.arr[i].yu)
+						    $div2.append($p2)
+						    var $p3=$("<p></p>")
+						    $p3.attr("class","tian")
+						    $p3.html(data.arr[i].tian)
+						    $div2.append($p3)
+						    var $div3=$("<div></div>")
+						    $div3.attr("class","leng")
+						    $div2.append($div3)
+						    var $p4=$("<p></p>")
+						    $p4.attr("class","re")
+						    $p4.html(data.arr[i].re)
+						    $div3.append($p4)
+						    var $p5=$("<p></p>")
+						    $p5.attr("class","ye")
+						    $p5.html(data.arr[i].ye)
+						    $div3.append($p5)
+						    var $p6=$("<p></p>")
+						    $p6.attr("class","shou")
+						    $p6.html(data.arr[i].shou)
+						    $div2.append($p6)
+						    var $p7=$("<p></p>")
+						    $p7.attr("class","jiu")
+						    $p7.html(data.arr[i].jiu)
+						    $div2.append($p7)
+						    var $div4=$("<div></div>")
+						    $div4.attr("class","qian")
+						    $div2.append($div4)
+						    var $p8=$("<p></p>")
+						    $p8.attr("class","jia")
+						    $p8.html(data.arr[i].jia)
+						    $div4.append($p8)
+						    var $p9=$("<p></p>")
+						    $p9.attr("class","shi")
+						    $p9.html(data.arr[i].shi)
+						    $div4.append($p9)
+						    var $p10=$("<p></p>")
+						    $p10.attr("class","xuan")
+						    $p10.html(data.arr[i].xuan)
+						    $div4.append($p10)
+						
+						}
+
+
+                       })
+				}
+			});
+			
+			
+			$.ajax({
+				type:"get",
+				url:"产品详情页.json",
+				async:true,
+				success:function(abc){
+					$(".left p").tap(function(){
+						var $index=$(this).index();
+						$(".left p").removeClass("style");
+						$(this).addClass("style");
+						var $txt;
+						if($index==0){
+							$txt=abc.xue;
+						}else if($index==1){
+							$txt=abc.xian;
+						}else if($index==2){
+							$txt=abc.qing;
+						}else if($index==3){
+							$txt=abc.ren;
+						}else if($index==4){
+							$txt=abc.zhi;
+						}else if($index==5){
+							$txt=abc.bing;
+						}
+						
+						for(var i=0;i<$txt.length;i++){
+							
+							var $div1=$("<div></div>")
+							$div1.attr("class","right-right")
+							$(".right").append($div1)
+							var $p1=$("<p></p>")
+							$p1.attr("class","tu")
+						    $div1.append($p1)
+						    var $img=$("<img />")
+						    $img.attr("src",$txt[i].img)
+						    $p1.append($img)
+						    var $div2=$("<div></div>")
+						    $div2.attr("class","right-1")
+						    $div1.append($div2)
+						    var $p2=$("<p></p>")
+						    $p2.attr("class","yu")
+						    $p2.html($txt[i].yu)
+						    $div2.append($p2)
+						    var $p3=$("<p></p>")
+						    $p3.attr("class","tian")
+						    $p3.html($txt[i].tian)
+						    $div2.append($p3)
+						    var $div3=$("<div></div>")
+						    $div3.attr("class","leng")
+						    $div2.append($div3)
+						    var $p4=$("<p></p>")
+						    $p4.attr("class","re")
+						    $p4.html($txt[i].re)
+						    $div3.append($p4)
+						    var $p5=$("<p></p>")
+						    $p5.attr("class","ye")
+						    $p5.html($txt[i].ye)
+						    $div3.append($p5)
+						    var $p6=$("<p></p>")
+						    $p6.attr("class","shou")
+						    $p6.html($txt[i].shou)
+						    $div2.append($p6)
+						    var $p7=$("<p></p>")
+						    $p7.attr("class","jiu")
+						    $p7.html($txt[i].jiu)
+						    $div2.append($p7)
+						    var $div4=$("<div></div>")
+						    $div4.attr("class","qian")
+						    $div2.append($div4)
+						    var $p8=$("<p></p>")
+						    $p8.attr("class","jia")
+						    $p8.html($txt[i].jia)
+						    $div4.append($p8)
+						    var $p9=$("<p></p>")
+						    $p9.attr("class","shi")
+						    $p9.html($txt[i].shi)
+						    $div4.append($p9)
+						    var $p10=$("<p></p>")
+						    $p10.attr("class","xuan")
+						    $p10.html($txt[i].xuan)
+						    $div4.append($p10)
+							
+							
+							
+						}
+						
+						
+						
+						
+						
+					})
+				}
+			});
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

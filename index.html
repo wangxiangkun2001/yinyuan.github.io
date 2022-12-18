@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				list-style: none;
+			}
+			html{
+				font-size: 62.5%;
+			}
+			.header{
+				width:100%;
+				height:10rem;
+				background-color: #16bcfa;
+				display:flex;
+				justify-content: space-between;
+				position:fixed;
+				top:0;
+			}
+			.left{
+				display:flex;
+				padding-top: 5rem;
+			}
+			.header img{
+				width:3rem;
+				height:3rem;
+			}
+			.hou{
+				width:100%;
+				margin-top:11rem;
+				display:flex;
+				justify-content: space-between;
+			}
+			.hou img{
+				width:3rem;
+				height:3rem;
+			}
+			.cun{
+				display:flex;
+			}
+			.zi{
+				width:100%;
+				display:flex;
+				justify-content: space-between;
+				border:1px solid #08abff;
+				border-radius: 1.2rem;
+				margin-top: 2rem;
+			}
+			.zi img{
+				width:2rem;
+				height:2rem;
+			}
+			.yan{
+				display:flex;
+				padding-left:2rem ;
+			}
+			.sou{
+				width:10rem;
+				border:1px solid #08ABFF;
+				border-radius: 1.2rem;
+				background-color: #08ABFF;
+				color:white;
+			}
+			.cont img{
+				width:3rem;
+				height:3rem;
+			}
+			.cont{
+				width:100%;
+				margin:1rem 1rem 2rem 1rem;
+				display:flex;
+				justify-content:space-between;
+				flex-wrap: wrap;
+			}
+			.cont div{
+				width:18%;
+				text-align: center;
+				margin-top:1rem;
+			}
+			.men{
+				width:100%;
+				display:flex;
+				justify-content:space-around;
+				margin-bottom:1rem;
+			}
+			.tu-left{
+				width:50%;
+			}
+			.tu-left img{
+				width:80%;
+				margin-left: 2rem;
+			}
+			.right-zi{
+				width:100%;
+				display:flex;
+				justify-content: space-between;
+			}
+			.right-zi img{
+				width:2rem;
+				height:2rem;
+			}
+			.qiu{
+				width:1px solid #789567;
+				height:1.8rem;
+				background-color:#789567;
+				color:white;
+				text-align: center;
+			}
+			.ren{
+				width:100%;
+				display:flex;
+				justify-content: space-between;
+			}
+			.qi{
+				border:1px solid #fff1f0;
+				background-color:#fff1f0;
+				color:#e4b69c;
+			}
+			.song{
+				width:100%;
+				display:flex;
+				justify-content: flex-start;
+			}
+			.mian{
+				margin-left: 1rem;
+				color:#debd92;
+			}
+			.zhishi{
+				border:1px solid #fff0e7;
+				/*background-color:#fff0e7;*/
+				color:#ffe9bd;
+				width:12rem;
+			}
+			.dan{
+				width:100%;
+				display:flex;
+				justify-content:space-around;
+			}
+			.wu img{
+				width:1.5rem;
+				height:1.5rem;
+			}
+			.wu{
+				display:flex;
+				border:1px solid #e0ddd6;
+			}
+			.right-box{
+				width:60%;
+			}
+			.jian{
+				border:1px solid #f7dee4;
+				color:#e0a094;
+			}
+			.kai{
+				color:#c2bfb6;
+			}
+			.footer{
+				width:100%;
+				display:flex;
+				justify-content: space-around;
+				position:fixed;
+				bottom: 0;
+			}
+			.footer div p img{
+				width:3rem;
+				height:3rem;
+			}
+			.footer div{
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="left">
+				<p><img src="img/eleme/左箭头.png"/></p>
+				<p style="font-size: 2rem;color:white;">饿了么</p>
+			</div>
+			<p style="padding-top: 5rem;"><img src="img/eleme/更多.png"/></p>
+		</div>
+		<div class="hou">
+			<div class="cun">
+				<p><img src="img/eleme/地图.png" /></p>
+				<p style="font-size: 2rem;">后赵卫生所</p>
+				<p><img src="img/eleme/右箭头.png"</p>
+			</div>
+			<p style="font-size: 1.2rem;color:#bdbdbd">美食果蔬医药.30分钟送达</p>
+		</div>
+		<div class="zi">
+			<div class="yan">
+			<p><img src="img/eleme/搜索.png"/></p>
+			<p style="color:#bdbdbd;font-size: 1.2rem;">紫燕百味鸡</p>
+			</div>
+			<p class="sou" style="text-align: center;">搜索</p>
+		</div>
+		<div class="cont">
+			<div>
+				<p><img src="img/eleme/美食_汉堡.png"/></p>
+				<p>美食外卖</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/便利店.png"/></p>
+				<p>超市便利</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/草莓.png"/></p>
+				<p>水果</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/跑腿APP.png"/></p>
+				<p>跑腿</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/买药.png"/></p>
+				<p>买药</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/下午茶.png"/></p>
+				<p>下午茶</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/杯子蛋糕.png"/></p>
+				<p>甜品饮品</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/鲜花.png"/></p>
+				<p>鲜花绿植</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/红包.png"/></p>
+				<p>天天爆红包</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/菜.png"/></p>
+				<p>买菜</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/果树.SVG.png"/></p>
+				<p>0元领水果</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/便利店.png"/></p>
+				<p>大型超市</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/大厨家常菜.png"/></p>
+				<p>家常菜</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/现金.png"/></p>
+				<p>天天赚现金</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/优惠券.png"/></p>
+				<p>天天1块9</p>
+			</div>
+		</div>
+		<div class="men">
+			<p class="tu-left"><img src="img/eleme/ac6eddc451da81cb39dbfa9b2636c7160924ab189b1f.jpg"/></p>
+		    <div class="right-box">
+		    <div class="right-zi">
+		    	<p class="qiu">球球专享</p>
+		    	<p style="font-size:1.2rem ;">蜜雪冰城（龙域店）</p>
+		    	<p><img src="img/eleme/216更多-竖向.png"/></p>
+		    </div>
+		    <div class="ren">
+		    	<p class="qi">人气新店</p>
+		    	<p>月售865</p>
+		    	<p>35分钟 1.9km</p>
+		    </div>
+		    <div class="song">
+		    	<p>起送￥20</p>
+		    	<p class="mian">免费配送<span style="color:black">￥3</span></p>
+		    </div>
+		    <p class="zhishi">"芝士奶盖蓝莓也不错"</p>
+		    <div class="dan">
+		    	<p class="jian">拼单减6元起</p>
+		    	<p class="jian">50减一</p>
+		    	<div class="wu">
+		    		<p><img src="img/eleme/会员 (1).png"/></p>
+		    		<p class="kai">6元无门槛</p>
+		    	</div>
+		    </div>
+		</div>
+		</div>
+		
+		
+		
+		<div class="men">
+			<p class="tu-left"><img src="img/eleme/TB1KGmYnf6TBKNjSZJiXXbKVFXa_!!0-item_pic.jpg"/></p>
+		    <div class="right-box">
+		    <div class="right-zi">
+		    	<p class="qiu">球球专享</p>
+		    	<p style="font-size:1.2rem ;">寻蜜时光（新会店）</p>
+		    	<p><img src="img/eleme/216更多-竖向.png"/></p>
+		    </div>
+		    <div class="ren">
+		    	<p class="qi">5分</p>
+		    	<p>月售29</p>
+		    	<p>62分钟 83.3km</p>
+		    </div>
+		    <div class="song">
+		    	<p>起送￥0</p>
+		    	<p class="mian">免费配送<!--<span style="color:black">￥3</span>--></p>
+		    </div>
+		    <p class="zhishi">"蛋糕不错，制作的很细致"</p>
+		    <div class="dan">
+		    	<p class="jian">10减1</p>
+		    	<p class="jian">50减2</p>
+		    	<div class="wu">
+		    		<p><img src="img/eleme/会员 (1).png"/></p>
+		    		<p class="kai">6元无门槛</p>
+		    	</div>
+		    </div>
+		</div>
+		</div>
+		
+		
+		<div class="men">
+			<p class="tu-left"><img src="img/eleme/f12e4e5c0d4f6f50.jpg"/></p>
+		    <div class="right-box">
+		    <div class="right-zi">
+		    	<p class="qiu">球球专享</p>
+		    	<p style="font-size:1.2rem ;">三色鸽</p>
+		    	<p><img src="img/eleme/216更多-竖向.png"/></p>
+		    </div>
+		    <div class="ren">
+		    	<p class="qi">暂无评分</p>
+		    	<p>月售1</p>
+		    	<p>73分钟 6.6km</p>
+		    </div>
+		    <div class="song">
+		    	<p>起送￥0</p>
+		    	<p class="mian">免费配送<!--<span style="color:black">￥3</span>--></p>
+		    </div>
+		    <p class="zhishi">"无与伦比的美味"</p>
+		    <div class="dan">
+		    	<p class="jian">50减2</p>
+		    	<p class="jian">100减6</p>
+		    	<div class="wu">
+		    		<p><img src="img/eleme/会员 (1).png"/></p>
+		    		<p class="kai">6元无门槛</p>
+		    	</div>
+		    </div>
+		</div>
+		</div>
+		
+		
+		
+		<div class="men">
+			<p class="tu-left"><img src="img/eleme/1669371238302347.jpg"/></p>
+		    <div class="right-box">
+		    <div class="right-zi">
+		    	<p class="qiu">爆红包</p>
+		    	<p style="font-size:1.2rem ;">古茗</p>
+		    	<p><img src="img/eleme/216更多-竖向.png"/></p>
+		    </div>
+		    <div class="ren">
+		    	<p class="qi">4.8分</p>
+		    	<p>月售1176</p>
+		    	<p>30分钟 3km</p>
+		    </div>
+		    <div class="song">
+		    	<p>起送￥18</p>
+		    	<p class="mian">免费配送<span style="color:black">￥4.5</span></p>
+		    </div>
+		    <p class="zhishi">"兰香茶底的百香双重奏真的好喝"</p>
+		    <div class="dan">
+		    	<p class="jian">红包最高28</p>
+		    	<p class="jian">50减1</p>
+		    	<!--<div class="wu">
+		    		<p><img src="img/eleme/会员 (1).png"/></p>
+		    		<p class="kai">6元无门槛</p>
+		    	</div>-->
+		    </div>
+		</div>
+		</div>
+		<div class="footer">
+			<div>
+				<p><img src="img/eleme/饿了么.png"/></p>
+				<p>首页</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/会员.png"/></p>
+				<p>会员</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/订单.png"/></p>
+				<p>订单</p>
+			</div>
+			<div>
+				<p><img src="img/eleme/我的.png"/></p>
+				<p>我的</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="zepto.js" ></script>
+		<script>
+			$(".men").tap(function(){
+				window.open("chanpinxiangqingye.html")
+			})
+		</script>
+	</body>
+</html>
